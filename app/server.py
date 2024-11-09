@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        text = request.form['text']
+        text = request.form['document']
         return 'You entered: {}'.format(text)
     return render_template('index.html')
 
